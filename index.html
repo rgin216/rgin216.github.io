@@ -1,58 +1,43 @@
 ---
 layout: default
-title: "Ryan"
+title: Ryan's Portfolio
 ---
 
-{% if site.show_excerpts %}
-  {% include home.html %}
-{% else %}
-  {% include archive.html title="Posts" %}
-{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>This is the homepage about me, created by Ryan.</p>
+    </header>
 
-<!doctype html>
-<title>Ryan's Homepage</title>
-<meta name="viewport" content="width=device-width">
-<meta name="description" content="Code Avengers superhero profile page">
+    <section>
+        <h2>About Me</h2>
+        <img src="https://cdn.discordapp.com/attachments/762526265096798229/1232125414231769098/Screenshot_20240423-122533.png?ex=6670d436&is=666f82b6&hm=6433602147931cef72655c10d99f0f2cace6ee81cf98b02e7421538ed619d8d5&" alt="Profile Picture" width="100">
+        <p>Hi, I'm Ryan. I'm a computer systems engineering student passionate about technology and innovation.</p>
+    </section>
 
-<header>
-  <a href="/index"><img alt="Code Avengers logo" title="Go to home page" src="/images/logo1.png"></a>
-  <a href="/about" title="Learn more about the team.">About Us</a> | <a href="https://www.codeavengers.com/blog" title="Read the latest.">Blog</a>
-</header>
+    <section>
+        <h2>Projects</h2>
+        <ul>
+            {% for project in site.data.projects %}
+            <li><strong>{{ project.name }}</strong> - {{ project.description }}</li>
+            {% endfor %}
+        </ul>
+    </section>
 
-<section>
-<h1>My Profile</h1>
-<img width="100" src="https://cdn.discordapp.com/attachments/762526265096798229/1232125414231769098/Screenshot_20240423-122533.png?ex=6670d436&is=666f82b6&hm=6433602147931cef72655c10d99f0f2cace6ee81cf98b02e7421538ed619d8d5&" title="Image :)">
-<br><strong>Name:</strong> Ryan<br>
-<strong>Birthday</strong>: 16<sup>th</sup> July <br>
-<strong>Height</strong>: 1.75m
-<br>
-<a href="https://images.pexels.com/photos/1083807/pexels-photo-1083807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" target="_blank"> 
-  <img width="300" src="https://images.pexels.com/photos/1083807/pexels-photo-1083807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" title="Image :)" alt="Hong Kong, Kowloon neon signs at night">
-</a>
-<br> This is  where I was born: Hong Kong<br>
+    <section>
+        <h2>Contact Me</h2>
+        <p>You can reach me at <a href="ryanjerry.gin@gmail.com">{{ site.email }}</a></p>
+    </section>
 
-
-
-<h2> My Top Websites </h2>
-<ul>
-<li> <a href="https://canvas.auckland.ac.nz/" target="_blank"> Canvas</a>
-<li> <a href="https://www.youtube.com/" target="_blank"> YouTube</a>
-<li> <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"> Gmail</a>
-<li> <a href="https://pricespy.co.nz/" target="_blank"> PriceSpy</a>
-</ul>
-
-<h2>My Top 5</h2>
-<ol>
-  <li>Spiderman Across the SpiderVerse</li>
-  <li>Ready Player One</li>
-  <li>Spiderman Into the SpiderVerse</li>
-  <li>Avengers Endgame</li>
-  <li>The Truman Show</li>
-</ol>
-
-<a href="likes.html"> My likes</a>
-
-</section>
-
-
-<footer>Ryan</footer>
+    <footer>
+        <p>Copyright &copy; {{ 'now' | date: "%Y" }} {{ site.author.name }}</p>
+    </footer>
+</body>
+</html>
