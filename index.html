@@ -12,22 +12,35 @@
 <body>
     <header>
         <h1>Welcome to My Website</h1>
-        <p>This is the homepage about me, created by Ryan.</p>
+        <p>This is the homepage about me, created by me :D.</p>
     </header>
 
     <section>
         <h2>About Me</h2>
-        <img src="https://cdn.discordapp.com/attachments/762526265096798229/1252399790814265535/image.png?ex=667213b2&is=6670c232&hm=dbfdcad3e7addaa1edad15a6f2d3963cc6bd9caa917c21d9b29741795c6456b0&" alt="Profile Picture" width="100">
+        <img src="https://cdn.discordapp.com/attachments/762526265096798229/1252399790814265535/image.png?ex=667213b2&is=6670c232&hm=dbfdcad3e7addaa1edad15a6f2d3963cc6bd9caa917c21d9b29741795c6456b0&" class="img-shadow" alt="Profile Picture" width="100">
         <br>
-        <p>Hi, I'm Ryan. I'm a computer systems engineering student passionate about technology and innovation.</p>
+        <p>Hi, I'm Ryan. I'm an Enginering conjoint with Commerce student of University of Auckland, passionate about technology and innovation. My specialisation is Computer Systems, and my major is Finance. 
+        </p>
+        <p> Any spare time I get, I love to play football with friends. I also enjoy music, willing to practise piano on any songs that fancies me. I'm also a big fan of movies, particularly Action and SciFi. 
+        </p>
     </section>
 
     <section>
         <h2>Projects</h2>
-        <ul>
-            {% for project in site.data.projects %}
-            <li><strong>{{ project.name }}</strong> - {{ project.description }}</li>
-            {% endfor %}
+        <p> I've been working on a few projects while studying at University, such as this website and a few others, which you can find below: 
+        </p>
+        <ul> Rock Paper Scissors!
+            <li>This game allows the user to play rock paper scissors with a computer.</li>
+            <li>The computer is able to recognise the previous hands you have played and change strategies after losing 3 times in a row</li>
+            <li><strong>Strategy 1:</strong> Cycle - the computer cycles the hand it throws in the following order: Paper, Scissors, Rock  </li>
+            <li><strong>Strategy 2:</strong> Random - the computer randomly selects a hand to throw</li>
+            <li><strong>Strategy 3:</strong> Last - the computer throws the hand that you threw in the previous round</li>
+            <li><a target="_blank" href="https://github.com/rgin216/RockPaperScissors">GitHub Repository Link</a></li>
+        </ul>
+        <ul> Quiz Creator
+            <li>This interface allows users to create a multi choice quiz, and run the quiz afterwards</li>
+            <li>The computer is able to recognise the previous hands you have played and change strategies after losing 3 times in a row</li>
+            <li><a target="_blank" href="https://github.com/rgin216/Quiz">GitHub Repository Link</a></li>
         </ul>
     </section>
 
