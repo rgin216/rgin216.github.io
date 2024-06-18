@@ -9,7 +9,7 @@ body {
 
 header {
     background-color: #2f3136; /* Slightly lighter grey for the header */
-    color: #67f6b0; /* Bright light green for header text */
+    color: #277750; /* Bright light green for header text */
     padding: 20px;
     text-align: center;
     border-bottom: 1px solid #4f545c; /* Subtle border for a visual separation */
@@ -29,9 +29,8 @@ section {
 
 .profile-img {
     width: 100px;
-    height: 100px;
     border-radius: 50%; /* circular image */
-    border: 3px solid #67f6b0; /* light green border */
+    border: 3px solid #277750; /* light green border */
 }
 
 .projects-list, .socials-list {
@@ -44,7 +43,7 @@ section {
 }
 
 a {
-    color: #67f6b0; /* Consistent light green for all links */
+    color: #277750; /* Consistent light green for all links */
     text-decoration: none; /* no underline */
 }
 
