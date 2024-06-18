@@ -1,30 +1,45 @@
+:root {
+    /* Dark theme properties */
+    --background-color: #36393f;
+    --text-color: #99aab5;
+    --accent-color: #277750;
+    --header-bg-color: #2f3136;
+    --section-bg-color: #40444b;
+}
+
+[data-theme="light"] {
+    /* Light theme properties */
+    --background-color: #ffffff;
+    --text-color: #36393f;
+    --accent-color: #4CAF50;
+    --header-bg-color: #ffffff;
+    --section-bg-color: #e0e0e0;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #36393f; /* Discord-like dark grey background */
-    color: #99aab5; /* Soft light green-grey text for general readability */
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 header {
-    background-color: #2f3136; /* Slightly lighter grey for the header */
-    color: #277750; /* Bright light green for header text */
+    position: relative; /* Ensures the button can be positioned absolutely relative to header */
+    background-color: var(--header-bg-color);
+    color: var(--accent-color);
     padding: 20px;
     text-align: center;
-    border-bottom: 1px solid #4f545c; /* Subtle border for a visual separation */
-}
-
-main {
-    padding: 20px;
+    border-bottom: 1px solid #4f545c;
 }
 
 section {
-    background-color: #40444b; /* Even lighter grey for sections to create depth */
+    background-color: var(--section-bg-color);
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px; /* rounded corners */
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5); /* subtle shadow for floating effect */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
 }
 
 .profile-img {

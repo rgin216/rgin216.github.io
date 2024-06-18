@@ -12,6 +12,7 @@
     <header>
         <h1>Welcome to My Website</h1>
         <p>This is the homepage about me, created by me :D</p>
+        <button id="theme-toggle" style="position: absolute; top: 20px; right: 20px; padding: 10px;">Toggle Theme</button>
     </header>
 
     <main>
@@ -49,5 +50,22 @@
             <a target="_blank" href="https://www.facebook.com/ryan.gin.7/"><img height="20" alt="Meta" title="Meta" src="https://admin.itsnicethat.com/images/vhN_fQRZHeKohK2ywvDSL_8Pnzs=/217006/format-webp%7Cwidth-1440/logo-Meta.png"></a>
         <p>Copyright &copy; 2024 Ryan Gin</p>
     </footer>
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        toggleButton.addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                toggleButton.textContent = 'Switch to Dark Mode';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                toggleButton.textContent = 'Switch to Light Mode';
+            }
+        });
+    
+        // Set initial mode
+        document.documentElement.setAttribute('data-theme', 'dark'); // Set default to dark
+        toggleButton.textContent = 'Switch to Light Mode';
+    </script>
 </body>
 </html>
