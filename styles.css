@@ -5,6 +5,7 @@
     --accent-color: #277750;
     --header-bg-color: #2f3136;
     --section-bg-color: #40444b;
+    --anti-color: #e0e0e0;
 }
 
 [data-theme="light"] {
@@ -14,6 +15,7 @@
     --accent-color: #4CAF50;
     --header-bg-color: #ffffff;
     --section-bg-color: #e0e0e0;
+    --anti-color: #40444b;
 }
 
 body {
@@ -39,7 +41,9 @@ h2 {
 }
 
 button {
-    border: 4px solid var(--background-color);
+    border: 4px solid var(--accent-color);
+    background-color: var(--anti-color);
+    color: var(--section-bg-colorr);
 }
 
 section {
