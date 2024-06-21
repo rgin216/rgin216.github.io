@@ -61,6 +61,12 @@ section {
     height: 100px;
 }
 
+.landscape-img {
+    border: 4px solid var(--background-color); /* light green border */
+    height: 100px;
+
+}
+
 .projects-list, .socials-list {
     list-style: none;
     padding: 0;
