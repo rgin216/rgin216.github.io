@@ -43,7 +43,7 @@ h2 {
 button {
     border: 4px solid var(--accent-color);
     background-color: var(--anti-color);
-    color: var(--section-bg-colorr);
+    color: var(--section-bg-color);
 }
 
 section {
