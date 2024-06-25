@@ -72,6 +72,10 @@ section {
 
 }
 
+.project-img {
+    height: 20px;
+}
+
 .projects-list, .socials-list {
     list-style: none;
     padding: 0;
