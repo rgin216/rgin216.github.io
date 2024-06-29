@@ -88,6 +88,11 @@ section ul {
 .list-container ul {
     list-style-type: none; 
     padding: 0; 
+    margin-right: 40px; /* Adjust this value to increase spacing */
+}
+
+.list-container ul:last-child {
+    margin-right: 0; /* Removes the margin from the last list to maintain padding */
 }
 
 .list-container li {
@@ -128,6 +133,7 @@ section ul {
 .project ul {
     list-style-type: disc; 
     padding-left: 20px;
+    justify-content: left; 
 }
 
 .project {
@@ -142,6 +148,7 @@ section ul {
 .projects-list li, .socials-list li {
     margin-bottom: 10px;
 }
+
 
 a {
     color: #277750; /* Consistent light green for all links */
