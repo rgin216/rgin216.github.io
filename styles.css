@@ -34,6 +34,24 @@ header {
     padding: 20px;
     text-align: center;
     border-bottom: 1px solid #4f545c;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: bold;
 }
 
 h2 {
@@ -105,4 +123,8 @@ footer {
     background-color: #2f3136; /* Same as header for consistency */
     color: #fff; /* pure white for contrast */
     border-top: 1px solid #4f545c; /* subtle top border */
+}
+
+html {
+    scroll-behavior: smooth;
 }
