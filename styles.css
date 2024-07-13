@@ -88,11 +88,11 @@ section ul {
 .list-container ul {
     list-style-type: none; 
     padding: 0; 
-    margin-right: 40px; /* Adjust this value to increase spacing */
+    margin-right: 40px; 
 }
 
 .list-container ul:last-child {
-    margin-right: 0; /* Removes the margin from the last list to maintain padding */
+    margin-right: 0; 
 }
 
 .list-container li {
@@ -149,22 +149,48 @@ section ul {
     margin-bottom: 10px;
 }
 
+.scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    scroll-snap-type: x mandatory;
+}
+
+.image-container {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    scroll-snap-align: center;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen; 
+    transition: transform 0.5s ease-out; 
+}
 
 a {
-    color: #277750; /* Consistent light green for all links */
-    text-decoration: none; /* no underline */
+    color: #277750; 
+    text-decoration: none; 
 }
 
 a:hover {
-    text-decoration: underline; /* underline on hover for usability */
+    text-decoration: underline; 
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #2f3136; /* Same as header for consistency */
-    color: #fff; /* pure white for contrast */
-    border-top: 1px solid #4f545c; /* subtle top border */
+    background-color: #2f3136; 
+    color: #fff; 
+    border-top: 1px solid #4f545c; 
 }
 
 html {
