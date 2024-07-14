@@ -154,26 +154,32 @@ section ul {
     white-space: nowrap;
     position: relative;
     width: 100%;
-    height: 400px;
+    height: auto;
+    padding: 20px 0; 
     scroll-snap-type: x mandatory;
 }
 
 .image-container {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    position: relative;
+    display: inline-flex;;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px; 
     scroll-snap-align: center;
 }
 
 .image-container img {
+    max-height: 300px;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: auto;
     height: 100%;
     mix-blend-mode: screen; 
-    transition: transform 0.5s ease-out; 
+}
+
+.image-container:last-child {
+    margin-right: 0;
 }
 
 a {

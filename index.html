@@ -159,17 +159,17 @@
 
         document.getElementById('image-wheel').addEventListener('scroll', function() {
             const containers = document.querySelectorAll('.image-container');
-            const center = this.scrollLeft + this.offsetWidth / 2; // Middle of the scroll container
+            const center = this.scrollLeft + this.offsetWidth / 2;
 
             containers.forEach(container => {
                 const rect = container.getBoundingClientRect();
-                const dist = Math.abs(center - (rect.left + rect.width / 2)); // Distance from center
-                const maxDist = this.offsetWidth / 2; // Max distance before fully split
+                const dist = Math.abs(center - (rect.left + rect.width / 2));
+                const maxDist = this.offsetWidth / 2;
 
-                const scale = Math.max(0, (maxDist - dist) / maxDist); // Scale for how much images should align
-                container.querySelector('.red-channel').style.transform = `translateX(${scale * -100}px)`;
+                const scale = Math.max(0, (maxDist - dist) / maxDist);
+                container.querySelector('.red-channel').style.transform = `translateX(${scale * -30}px)`;
                 container.querySelector('.green-channel').style.transform = `translateX(${scale * 0}px)`;
-                container.querySelector('.blue-channel').style.transform = `translateX(${scale * 100}px)`;
+                container.querySelector('.blue-channel').style.transform = `translateX(${scale * 30}px)`;
             });
         });
 
