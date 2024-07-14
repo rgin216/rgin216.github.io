@@ -167,9 +167,9 @@
                 const maxDist = this.offsetWidth / 2; // Max distance before fully split
 
                 const scale = Math.max(0, (maxDist - dist) / maxDist); // Scale for how much images should align
-                container.querySelector('.red-channel').style.transform = `translateX(${scale * -50}px)`;
+                container.querySelector('.red-channel').style.transform = `translateX(${scale * -100}px)`;
                 container.querySelector('.green-channel').style.transform = `translateX(${scale * 0}px)`;
-                container.querySelector('.blue-channel').style.transform = `translateX(${scale * 50}px)`;
+                container.querySelector('.blue-channel').style.transform = `translateX(${scale * 100}px)`;
             });
         });
 
