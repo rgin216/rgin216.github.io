@@ -162,7 +162,7 @@ section ul {
 }
 
 .image-container {
-    display: inline-flex;;
+    display: inline-block;;
     flex-direction: column;
     justify-content: center;
     align-items: center;
