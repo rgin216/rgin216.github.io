@@ -163,7 +163,7 @@ section ul {
 .image-container {
     display: inline-block;
     position: relative;
-    width: 300px;  // Set a fixed width for each image container
+    width: 300px;  
     height: 300px;
 }
 
