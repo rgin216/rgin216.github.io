@@ -152,12 +152,15 @@ section ul {
 
 
 .scroll-container {
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: nowrap;
     display: flex;
     flex-wrap: nowrap;
     scroll-snap-type: x mandatory;
     overflow-y: hidden;
+    overflow-x: scroll;
+    width: auto;
+    height: 310px;
 }
 
 .image-container {
@@ -165,6 +168,7 @@ section ul {
     position: relative;
     width: 300px;  
     height: 300px;
+    
 }
 
 .image-container img {
@@ -173,7 +177,8 @@ section ul {
     position: absolute;
     top: 0;
     left: 0;
-    transition: transform 0.5s ease-out;
+    mix-blend-mode: screen;
+    transition: transform 0.2s ease-out;
 }
 
 html {

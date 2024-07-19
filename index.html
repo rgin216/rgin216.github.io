@@ -208,6 +208,21 @@
             });
         });
 
+        const scrollContainer = document.getElementById('image-wheel');
+        const totalWidth = scrollContainer.scrollWidth;
+        const currentScroll = scrollContainer.scrollLeft;
+        const visibleWidth = scrollContainer.offsetWidth;
+
+        // Check if near the end
+        if (currentScroll + visibleWidth >= totalWidth) {
+            scrollContainer.scrollLeft = 0; // Jump back to the start
+        }
+
+        // Check if at the start and scrolling left
+        if (currentScroll <= 0) {
+            scrollContainer.scrollLeft = totalWidth - visibleWidth; // Jump to the end
+        }
+
         document.getElementById('image-wheel').addEventListener('mouseenter', function () {
             this.style.overflowX = 'scroll';
         });
@@ -217,8 +232,8 @@
         });
 
         document.getElementById('image-wheel').addEventListener('wheel', function (event) {
-            this.scrollLeft += event.deltaY * 30; // Multiplies the deltaY to increase scroll speed
-            event.preventDefault(); // Prevents the page from scrolling down
+            this.scrollLeft += event.deltaY * 100; // Increase the multiplier to ensure a larger scroll jump
+            event.preventDefault(); // Stop the window from scrolling vertically
         });
 
         // Function to handle the RGB displacement based on the scroll position
