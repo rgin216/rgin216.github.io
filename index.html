@@ -227,7 +227,7 @@
 
 
         document.getElementById('image-wheel').addEventListener('wheel', function (event) {
-            this.scrollLeft += event.deltaY * 10; // Increase the multiplier to ensure a larger scroll jump
+            this.scrollLeft += event.deltaY * 5; // Increase the multiplier to ensure a larger scroll jump
             event.preventDefault(); // Stop the window from scrolling vertically
         });
         document.getElementById('image-wheel').addEventListener('scroll', function () {
