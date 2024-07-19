@@ -229,7 +229,7 @@
             const currentScroll = scrollContainer.scrollLeft;
             const visibleWidth = scrollContainer.offsetWidth;
 
-            if (currentScroll <= 0) {
+            if (currentScroll <= 1) {
                 scrollContainer.scrollLeft = totalWidth - visibleWidth;
             } else if (currentScroll + visibleWidth >= totalWidth) {
                 scrollContainer.scrollLeft = 0;
@@ -252,9 +252,9 @@
                 const scale = Math.max(0, (maxDist - dist) / maxDist); // Scale for how much images should align
 
                 // Apply the scale and direction to transform the channels
-                container.querySelector('.red-channel').style.transform = `translateX(${scale * direction * 50}px)`;
+                container.querySelector('.red-channel').style.transform = `translateX(${scale  * 50}px)`;
                 container.querySelector('.green-channel').style.transform = `translateX(${scale * direction * 0}px)`;
-                container.querySelector('.blue-channel').style.transform = `translateX(${scale * direction * -50}px)`;
+                container.querySelector('.blue-channel').style.transform = `translateX(${scale * -50}px)`;
             });
         });
 
