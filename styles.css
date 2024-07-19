@@ -156,7 +156,7 @@ section ul {
     white-space: nowrap;
     position: relative;
     width: auto;
-    height: 300px;
+    height: 310px;
     padding: 20px 0; 
     scroll-snap-type: x mandatory;
 }
