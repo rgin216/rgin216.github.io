@@ -157,7 +157,6 @@ section ul {
     position: relative;
     align-items: center;
     flex-wrap: nowrap;
-    scroll-snap-type: x mandatory;
     overflow-y: hidden;
     overflow-x: scroll;
     width: 80%;
@@ -170,8 +169,8 @@ section ul {
     display: inline-block;
     position: relative;
     height: 500px;
-    margin-right: 500px;
-    margin-left: 500px;
+    margin-right: 200px;
+    margin-left: 200px;
     scroll-snap-align: center;
 }
 
