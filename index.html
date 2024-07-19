@@ -227,7 +227,7 @@
         
 
         document.getElementById('image-wheel').addEventListener('wheel', function (event) {
-            this.scrollLeft += event.deltaY * 1; // Increase the multiplier to ensure a larger scroll jump
+            this.scrollLeft += event.deltaY * 10; // Increase the multiplier to ensure a larger scroll jump
             event.preventDefault(); // Stop the window from scrolling vertically
         });
 
@@ -249,7 +249,7 @@
 
                 // Calculate the scale of displacement based on the distance to the center
                 const displacementScale = (scrollContainer.offsetWidth / 2 - distToCenter) / (scrollContainer.offsetWidth / 2);
-                const displacement = maxDisplacement * displacementScale;
+                const displacement = maxDisplacement * displacementScale*10;
 
                 // Apply the calculated transformation to each color channel
                 container.querySelector('.red-channel').style.transform = `translateX(${-displacement}px)`;
