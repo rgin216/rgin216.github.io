@@ -163,7 +163,8 @@ section ul {
     overflow-x: scroll;
     width: 80%;
     height: 310px;
-    background-color: 000000;
+    background-color: #0000;;
+    scroll-behavior: smooth;
 }
 
 
