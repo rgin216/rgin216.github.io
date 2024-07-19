@@ -231,47 +231,31 @@
             event.preventDefault(); // Stop the window from scrolling vertically
         });
         document.getElementById('image-wheel').addEventListener('scroll', function () {
+            const scrollContainer = document.getElementById('image-wheel');
             const containers = document.querySelectorAll('.image-container');
-            const center = this.scrollLeft + this.offsetWidth / 2; // Middle of the scroll container
+
+            // Get the center of the scroll container
+            const center = scrollContainer.scrollLeft + scrollContainer.offsetWidth / 2;
 
             containers.forEach(container => {
                 const rect = container.getBoundingClientRect();
-                const dist = Math.abs(center - (rect.left + rect.width / 2)); // Distance from center
-                const maxDist = this.offsetWidth / 2; // Max distance before fully split
+                const containerCenter = rect.left + rect.width / 2;
+                const distToCenter = Math.abs(center - containerCenter);
 
-                const scale = Math.max(0, (maxDist - dist) / maxDist); // Scale for how much images should align
-                container.querySelector('.red-channel').style.transform = `translateX(${scale * -50}px)`;
-                container.querySelector('.green-channel').style.transform = `translateX(${scale * 0}px)`;
-                container.querySelector('.blue-channel').style.transform = `translateX(${scale * 50}px)`;
+                // Calculate the maximum displacement based on the container's width
+                const maxDisplacement = rect.width / 4;
+
+                // Calculate the scale of displacement based on the distance to the center
+                const displacementScale = (scrollContainer.offsetWidth / 2 - distToCenter) / (scrollContainer.offsetWidth / 2);
+                const displacement = maxDisplacement * displacementScale*10;
+
+                // Apply the calculated transformation to each color channel
+                container.querySelector('.red-channel').style.transform = `translateX(${-displacement}px)`;
+                container.querySelector('.green-channel').style.transform = `translateX(0px)`;
+                container.querySelector('.blue-channel').style.transform = `translateX(${displacement}px)`;
             });
         });
-        // // Function to handle the RGB displacement based on the scroll position
-        // function handleRGBDisplacement() {
-        //     const scrollContainer = document.getElementById('image-wheel');
-        //     const containers = document.querySelectorAll('.image-container');
-
-        //     // Get the center of the scroll container
-        //     const center = scrollContainer.scrollLeft + scrollContainer.offsetWidth / 2;
-
-        //     containers.forEach(container => {
-        //         const rect = container.getBoundingClientRect();
-        //         const containerCenter = rect.left + rect.width / 2;
-        //         const distToCenter = Math.abs(center - containerCenter);
-
-        //         // Calculate the maximum displacement based on the container's width
-        //         const maxDisplacement = rect.width / 4;
-
-        //         // Calculate the scale of displacement based on the distance to the center
-        //         const displacementScale = (scrollContainer.offsetWidth / 2 - distToCenter) / (scrollContainer.offsetWidth / 2);
-        //         const displacement = maxDisplacement * displacementScale*10;
-
-        //         // Apply the calculated transformation to each color channel
-        //         container.querySelector('.red-channel').style.transform = `translateX(${-displacement}px)`;
-        //         container.querySelector('.green-channel').style.transform = `translateX(0px)`;
-        //         container.querySelector('.blue-channel').style.transform = `translateX(${displacement}px)`;
-        //     });
-        // }
-
+        
         // Initial call and setup an event listener for scrolling
         handleRGBDisplacement(); // Call initially in case the page loads with some offset
         document.getElementById('image-wheel').addEventListener('scroll', handleRGBDisplacement);
