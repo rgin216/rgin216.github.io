@@ -154,6 +154,8 @@ section ul {
 .scroll-container {
     white-space: nowrap;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     flex-wrap: nowrap;
     scroll-snap-type: x mandatory;
     overflow-y: hidden;
@@ -183,6 +185,15 @@ section ul {
 .image-container:last-child {
     margin-right: 0;
 }
+
+@keyframes image-container {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 
 html {
     scroll-behavior: smooth;
