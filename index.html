@@ -215,12 +215,12 @@
         const visibleWidth = scrollContainer.offsetWidth;
 
         // Check if near the end
-        if (currentScroll + visibleWidth >= totalWidth) {
+        if (currentScroll + visibleWidth >= totalWidth-1) {
             scrollContainer.scrollLeft = 0; // Jump back to the start
         }
 
         // Check if at the start and scrolling left
-        if (currentScroll <= 0) {
+        if (currentScroll <= 1) {
             scrollContainer.scrollLeft = totalWidth - visibleWidth; // Jump to the end
         }
 
