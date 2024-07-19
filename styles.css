@@ -157,14 +157,12 @@ section ul {
     position: relative;
     align-items: center;
     flex-wrap: nowrap;
-    flex-direction: row;
     scroll-snap-type: x mandatory;
     overflow-y: hidden;
     overflow-x: scroll;
     width: 80%;
     height: 310px;
     background-color: #0000;;
-    scroll-behavior: smooth;
 }
 
 
