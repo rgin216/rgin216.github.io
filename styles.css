@@ -152,33 +152,36 @@ section ul {
 
 
 .scroll-container {
-    overflow-x: auto;
     white-space: nowrap;
     display: flex;
     flex-wrap: nowrap;
     scroll-snap-type: x mandatory;
     overflow-y: hidden;
     overflow-x: scroll;
-    width: auto;
+    width: 80%;
     height: 310px;
 }
 
 .image-container {
     display: inline-block;
     position: relative;
-    width: 300px;  
+    width: 800px;  
     height: 300px;
-    
+    margin-right: 300px;
+
 }
 
 .image-container img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 300px;
     position: absolute;
     top: 0;
     left: 0;
     mix-blend-mode: screen;
     transition: transform 0.2s ease-out;
+}
+.image-container:last-child {
+    margin-right: 0;
 }
 
 html {
