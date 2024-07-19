@@ -154,10 +154,9 @@ section ul {
 .scroll-container {
     white-space: nowrap;
     display: flex;
-    flex-direction: row;
+    position: relative;
     align-items: center;
     flex-wrap: nowrap;
-    scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -169,10 +168,10 @@ section ul {
 .image-container {
     display: inline-block;
     position: relative;
- 
+    position: relative;
     height: 500px;
     margin-right: 500px;
-
+    scroll-snap-align: center;
 }
 
 .image-container img {
