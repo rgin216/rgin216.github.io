@@ -157,6 +157,7 @@ section ul {
     position: relative;
     align-items: center;
     flex-wrap: nowrap;
+    flex-direction: row;
     scroll-snap-type: x mandatory;
     overflow-y: hidden;
     overflow-x: scroll;
