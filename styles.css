@@ -161,7 +161,7 @@ section ul {
     overflow-x: scroll;
     width: 80%;
     height: 310px;
-    background-color: #0000;;
+    background-color: #00000000;
 }
 
 
@@ -169,6 +169,7 @@ section ul {
     display: inline-block;
     position: relative;
     height: 500px;
+    width: auto;
     margin-right: 200px;
     margin-left: 200px;
     scroll-snap-align: center;
