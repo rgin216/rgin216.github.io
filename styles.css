@@ -157,12 +157,14 @@ section ul {
     flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
+    scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     overflow-y: hidden;
     overflow-x: scroll;
     width: 80%;
     height: 310px;
 }
+
 
 .image-container {
     display: inline-block;

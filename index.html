@@ -224,16 +224,10 @@
             scrollContainer.scrollLeft = totalWidth - visibleWidth; // Jump to the end
         }
 
-        document.getElementById('image-wheel').addEventListener('mouseenter', function () {
-            this.style.overflowX = 'scroll';
-        });
-
-        document.getElementById('image-wheel').addEventListener('mouseleave', function () {
-            this.style.overflowX = 'hidden';
-        });
+        
 
         document.getElementById('image-wheel').addEventListener('wheel', function (event) {
-            this.scrollLeft += event.deltaY * 100; // Increase the multiplier to ensure a larger scroll jump
+            this.scrollLeft += event.deltaY * 1; // Increase the multiplier to ensure a larger scroll jump
             event.preventDefault(); // Stop the window from scrolling vertically
         });
 
