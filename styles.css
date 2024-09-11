@@ -18,6 +18,105 @@
     --anti-color: #40444b;
 }
 
+.container {
+    height:350px; 
+    position:relative; 
+    overflow:hidden;
+  }
+  
+  .photobanner {
+    position:relative; 
+    top:0px; 
+    left:0px; 
+    overflow:hidden; 
+    white-space: nowrap;
+    width: 100%;
+    animation: bannermove 10s linear infinite;
+  }
+  
+  .photobanner img {   
+    max-height: 200px; 
+    [data-theme="dark"] {
+        /* Dark theme properties */
+        --background-color: #36393f;
+        --text-color: #99aab5;
+        --accent-color: #277750;
+        --header-bg-color: #2f3136;
+        --section-bg-color: #40444b;
+        --anti-color: #e0e0e0;
+    }
+    
+    [data-theme="light"] {
+        /* Light theme properties */
+        --background-color: #ffffff;
+        --text-color: #36393f;
+        --accent-color: #4CAF50;
+        --header-bg-color: #ffffff;
+        --section-bg-color: #e0e0e0;
+        --anti-color: #40444b;
+    }
+    
+    .container {
+        height: 350px; 
+        position: relative; 
+        overflow: hidden;
+    }
+      
+    .photobanner {
+        position: relative; 
+        top: 0px; 
+        left: 0px; 
+        overflow: hidden; 
+        white-space: nowrap;
+        animation: bannermove 5s linear infinite;
+    }
+      
+    .photobanner img {    
+
+        margin: 0 0.5em;
+        display: inline-block;
+    }
+      
+    @keyframes bannermove {
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(-50%, 0);
+        }
+    }
+    
+    body {
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+    
+    header {
+        position: relative; /* Ensures the button can be positioned absolutely relative to header */
+        background-color: var(--header-bg-color);
+        color: var(--accent-color);
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid #4f545c;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+    margin: 0 0.5em 
+  }
+  
+  @keyframes bannermove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+  }
+
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -148,43 +247,6 @@ section ul {
 .projects-list li, .socials-list li {
     margin-bottom: 10px;
 }
-
-
-
-.scroll-container {
-    white-space: nowrap;
-    display: flex;
-    position: relative;
-    align-items: center;
-    flex-wrap: nowrap;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    width: 80%;
-    height: 310px;
-    background-color: #00000000;
-}
-
-
-.image-container {
-    display: inline-block;
-    position: relative;
-    height: 500px;
-    width: auto;
-    margin-right: 200px;
-    margin-left: 200px;
-    scroll-snap-align: center;
-}
-
-.image-container img {
-    width: auto;
-    height: 500px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    mix-blend-mode: screen;
-    transition: transform 0.2s ease-out;
-}
-
 
 html {
     scroll-behavior: smooth;

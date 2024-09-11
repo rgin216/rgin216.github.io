@@ -31,7 +31,7 @@
             <a href="#myShortcuts">My Shortcuts</a> | <a href="#gallery">Gallery</a>
             </ul>
         </nav>
-        <button id="theme-toggle" style="position: absolute; top: 20px; right: 20px; padding: 10px;">Toggle
+        <button id="theme-toggle" style="position: absolute; top: 10px; right: 10px; padding: 10px;">Toggle
             Theme</button>
     </header>
 
@@ -130,40 +130,23 @@
 
         <section id="gallery">
             <h2>Gallery</h2>
-            <p>Here are some images I've taken over the years, this section was made with the use of ChatGPT</p>
-            <p>STILL WORK IN PROGRESS</p>
-            <div id="image-wheel" class="scroll-container">
-                <div class="image-container" data-index="0">
-                    <img src="images/lib1r.png" class="red-channel" alt="red channel" loading="lazy">
-                    <img src="images/lib1g.png" class="green-channel" alt="green channel" loading="lazy">
-                    <img src="images/lib1b.png" class="blue-channel" alt="blue channel" loading="lazy">
+            <p>This section is still a work in progress</p>
+            <div id="container">
+                <div class="photobanner">
+                    <img src="images/biking.jpg" alt="biking with friends">
+                    <img src="images/hiking.jpg" alt="hiking in hk Lantau Island">
+                    <img src="images/football.jpg" alt="football competition">
+                    <img src="images/gokart.jpg" alt="gokarting in Ellerslie">
+                    <img src="images/garden.jpg" alt="Botanic garden in japan">
+                    <img src="images/rooftop.jpg" alt="rooftop of HK">
+                    <img src="images/biking.jpg" alt="biking with friends">
+                    <img src="images/hiking.jpg" alt="hiking in hk Lantau Island">
+                    <img src="images/football.jpg" alt="football competition">
+                    <img src="images/gokart.jpg" alt="gokarting in Ellerslie">
+                    <img src="images/garden.jpg" alt="Botanic garden in japan">
+                    <img src="images/rooftop.jpg" alt="rooftop of HK">
                 </div>
-                <div class="image-container" data-index="0">
-                    <img src="/images/lib2r.png" class="red-channel" alt="red channel">
-                    <img src="/images/lib2g.png" class="green-channel" alt="green channel">
-                    <img src="/images/lib2b.png" class="blue-channel" alt="blue channel">
-                </div>
-                <div class="image-container" data-index="0">
-                    <img src="/images/lib3r.png" class="red-channel" alt="red channel">
-                    <img src="/images/lib3g.png" class="green-channel" alt="green channel">
-                    <img src="/images/lib3b.png" class="blue-channel" alt="blue channel">
-                </div>
-                <div class="image-container" data-index="0">
-                    <img src="/images/lib4r.png" class="red-channel" alt="red channel">
-                    <img src="/images/lib4g.png" class="green-channel" alt="green channel">
-                    <img src="/images/lib4b.png" class="blue-channel" alt="blue channel">
-                </div>
-                <div class="image-container" data-index="0">
-                    <img src="images/lib1r.png" class="red-channel" alt="red channel" loading="lazy">
-                    <img src="images/lib1g.png" class="green-channel" alt="green channel" loading="lazy">
-                    <img src="images/lib1b.png" class="blue-channel" alt="blue channel" loading="lazy">
-                </div>
-                <div class="image-container" data-index="0">
-                    <img src="/images/lib2r.png" class="red-channel" alt="red channel">
-                    <img src="/images/lib2g.png" class="green-channel" alt="green channel">
-                    <img src="/images/lib2b.png" class="blue-channel" alt="blue channel">
-                </div>
-            </div>
+              </div>
         </section>
 
     </main>
@@ -208,59 +191,6 @@
             });
         });
 
-        const scrollContainer = document.getElementById('image-wheel');
-        const totalWidth = scrollContainer.scrollWidth;
-        const currentScroll = scrollContainer.scrollLeft;
-        const visibleWidth = scrollContainer.offsetWidth;
-
-
-
-
-
-        document.getElementById('image-wheel').addEventListener('wheel', function (event) {
-            this.scrollLeft += event.deltaY * 100; // Increase the multiplier to ensure a larger scroll jump
-            event.preventDefault(); // Stop the window from scrolling vertically
-            checkAndResetScroll(this);
-        });
-
-        function checkAndResetScroll(scrollContainer) {
-            const totalWidth = scrollContainer.scrollWidth;
-            const currentScroll = scrollContainer.scrollLeft;
-            const visibleWidth = scrollContainer.offsetWidth;
-
-            if (currentScroll <= 1) {
-                scrollContainer.scrollLeft = totalWidth - visibleWidth;
-            } else if (currentScroll + visibleWidth >= totalWidth) {
-                scrollContainer.scrollLeft = 0;
-            }
-        }
-
-
-        document.getElementById('image-wheel').addEventListener('scroll', function () {
-            const scrollContainer = document.getElementById('image-wheel');
-            const containers = document.querySelectorAll('.image-container');
-            const center = this.scrollLeft + this.offsetWidth / 2; // Middle of the scroll container
-
-            containers.forEach(container => {
-                const rect = container.getBoundingClientRect();
-                const containerCenter = rect.left + rect.width / 2;
-                const dist = Math.abs(center - containerCenter); // Distance from center
-                const direction = containerCenter < center ? -1 : 1; // Determine the direction of the displacement
-
-                const maxDist = this.offsetWidth / 2; // Max distance before fully split
-                const scale = Math.max(0, (maxDist - dist) / maxDist); // Scale for how much images should align
-
-                // Apply the scale and direction to transform the channels
-                container.querySelector('.red-channel').style.transform = `translateX(${scale  * 50}px)`;
-                container.querySelector('.green-channel').style.transform = `translateX(${scale * direction * 0}px)`;
-                container.querySelector('.blue-channel').style.transform = `translateX(${scale * -50}px)`;
-            });
-        });
-
-
-        // Initial call and setup an event listener for scrolling
-        handleRGBDisplacement(); // Call initially in case the page loads with some offset
-        document.getElementById('image-wheel').addEventListener('scroll', handleRGBDisplacement);
     </script>
 </body>
 
