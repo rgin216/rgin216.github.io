@@ -49,6 +49,12 @@
     margin: 0 0.5em
 }
 
+#gallery {
+    overflow: hidden;
+    height:auto;
+    
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -203,8 +209,4 @@ footer {
     background-color: #2f3136;
     color: #fff;
     border-top: 1px solid #4f545c;
-}
-
-html {
-    scroll-behavior: smooth;
 }
