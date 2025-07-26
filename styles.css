@@ -109,7 +109,7 @@
   }
   
   @keyframes bannermove {
-    0% {
+    50% {
         transform: translate(0, 0);
     }
     100% {
