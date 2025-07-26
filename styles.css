@@ -65,13 +65,13 @@
       
     .photobanner {
         display: flex;
-        width: calc(100% * 3);
+        /* width: calc(100% * 3); */
         /* position: relative; 
         top: 0px; 
         left: 0px; 
         overflow: hidden; 
         white-space: nowrap; */
-        animation: bannermove 30s linear infinite;
+        animation: bannermove 15s linear infinite;
     }
       
     .photobanner img {    
